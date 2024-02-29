@@ -1,3 +1,4 @@
+library("randomForest")
 bacteria_asv_rhizo<- read.csv("./bacteria_asv_select_rhizo.csv",header = T,row.names = 1)
 bacteria_asv_select_t <- t(bacteria_asv_rhizo)
 
