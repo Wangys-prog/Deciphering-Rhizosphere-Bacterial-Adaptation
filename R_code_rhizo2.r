@@ -932,8 +932,8 @@ rho1<- read.csv("bacteria_g_Caulobacter_rho_merge.csv",header = T,row.names = 1)
 library(splines)
 library(ggpmisc)
 set.seed(1234)
-my.formula <-rho1$lrv~ rho1$nucl_dist
-p1<- ggplot(rho1, aes(nucl_dist, lrv)) + 
+my.formula <-rho1$propr~ rho1$nucl_dist
+p1<- ggplot(rho1, aes(nucl_dist, propr)) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula = y ~ x ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = my.formula, 
@@ -1025,7 +1025,7 @@ library(ggpmisc)
 rho2<- read.csv("bacteria_g_Chryseobacterium_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p2<- ggplot(rho2, aes(as.numeric(val1), as.numeric(lrv))) + 
+p2<- ggplot(rho2, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1117,7 +1117,7 @@ library(ggpmisc)
 rho3<- read.csv("bacteria_g_Dyadobacter_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p3<- ggplot(rho3, aes(as.numeric(val1), as.numeric(lrv))) + 
+p3<- ggplot(rho3, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1220,7 +1220,7 @@ library(ggpmisc)
 rho4<- read.csv("bacteria_g_Flavobacterium_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p4<- ggplot(rho4, aes(as.numeric(val1), as.numeric(lrv))) + 
+p4<- ggplot(rho4, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1329,7 +1329,7 @@ library(ggpmisc)
 rho5<- read.csv("bacteria_g_Luteolibacter_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p5<- ggplot(rho5, aes(as.numeric(val1), as.numeric(lrv))) + 
+p5<- ggplot(rho5, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1432,7 +1432,7 @@ library(ggpmisc)
 rho6<- read.csv("bacteria_g_Massilia_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p6<- ggplot(rho6, aes(as.numeric(val1), as.numeric(lrv))) + 
+p6<- ggplot(rho6, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1535,7 +1535,7 @@ library(ggpmisc)
 rho7<- read.csv("bacteria_g_Mucilaginibacter_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p7<- ggplot(rho7, aes(as.numeric(val1), as.numeric(lrv))) + 
+p7<- ggplot(rho7, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1636,7 +1636,7 @@ library(ggpmisc)
 rho8<- read.csv("bacteria_g_Novosphingobium_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p8<- ggplot(rho8, aes(as.numeric(val1), as.numeric(lrv))) + 
+p8<- ggplot(rho8, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1740,7 +1740,7 @@ library(ggpmisc)
 rho9<- read.csv("bacteria_g_Paraburkholderia_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p9<- ggplot(rho9, aes(as.numeric(val1), as.numeric(lrv))) + 
+p9<- ggplot(rho9, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1841,7 +1841,7 @@ library(ggpmisc)
 rho10<- read.csv("bacteria_g_Pedobacter_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p10<- ggplot(rho10, aes(as.numeric(val1), as.numeric(lrv))) + 
+p10<- ggplot(rho10, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -1942,7 +1942,7 @@ library(ggpmisc)
 rho11<- read.csv("bacteria_g_Pseudomonas_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p11<- ggplot(rho11, aes(as.numeric(val1), as.numeric(lrv))) + 
+p11<- ggplot(rho11, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -2043,7 +2043,7 @@ library(ggpmisc)
 rho12<- read.csv("bacteria_g_Rhizobium_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p12<- ggplot(rho12, aes(as.numeric(val1), as.numeric(lrv))) + 
+p12<- ggplot(rho12, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -2144,7 +2144,7 @@ library(ggpmisc)
 rho13<- read.csv("bacteria_g_S0134_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p13<- ggplot(rho13, aes(as.numeric(val1), as.numeric(lrv))) + 
+p13<- ggplot(rho13, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
@@ -2245,7 +2245,7 @@ library(ggpmisc)
 rho14<- read.csv("bacteria_g_Streptomyces_rho_dnadist_merge.csv",header = T,row.names = 1)
 set.seed(1234)
 
-p14<- ggplot(rho14, aes(as.numeric(val1), as.numeric(lrv))) + 
+p14<- ggplot(rho14, aes(as.numeric(val1), as.numeric(propr))) + 
   geom_point(colour="black", size = 4) + 
   geom_smooth(method = "lm", formula =y ~ ns(x, 1) ,colour="black",lwd=1.5, lty=1)+
   stat_poly_eq(formula = y ~ ns(x, 1), 
